@@ -1,0 +1,73 @@
+<h3>ComplicationPro Settings</h3>
+<form class="form-horizontal">
+    <div class="control-group">
+        <h4>API Key</h4>
+        <p>You can get this value from the settings menu in the Complicated app after completing the setup wizard.</p>
+        <label class="control-label">{{ _('API Key') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.apiKey">
+        </div>
+        <hr>
+        <h4>Complication Text</h4>
+        <p>Set the value you'd like to display for each type of Complication. You can use any string as well as the keys listed below to get print specific information. Please keep in mind that not all values will display properly on all complications.</p>
+        <ul>
+            <li><code>{progress}</code>: Print progress percentage.</li>
+            <li><s><code>{timeElapsed}</code>: Time elapsed since the print started.</s> <i>Not yet implemented...</i></li>
+            <li><s><code>{timeRemaining}</code>: Time remaining until the print is complete.</s> <i>Not yet implemented...</i></li>
+        </ul>
+        <label class="control-label">{{ _('Modular Large') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.modularLarge">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Modular Small') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.modularSmall">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Utilitarian Small') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.utilitarianSmall">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Utilitarian Small Flat') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.utilitarianSmallFlat">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Utilitarian Large') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.utilitarianLarge">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Circular Small') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.circularSmall">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Extra Large') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.extraLarge">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Graphic Corner') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.graphicCorner">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Graphic Rectangular') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.graphicRectangular">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Graphic Bezel') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.graphicBezel">
+        </div>
+        <br>
+        <label class="control-label">{{ _('Graphic Circular') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.graphicCircular">
+        </div>
+    </div>
+</form>
