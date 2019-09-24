@@ -1,19 +1,26 @@
 <h3>ComplicationPro Settings</h3>
 <form class="form-horizontal">
     <div class="control-group">
-        <h4>API Key</h4>
+        <h4>Complicated API Key</h4>
         <p>You can get this value from the settings menu in the Complicated app after completing the setup wizard.</p>
         <label class="control-label">{{ _('API Key') }}</label>
         <div class="controls">
             <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.apiKey">
         </div>
         <hr>
+        <h4>OctoPrint API Key</h4>
+        <p>You can get this from <i>Settings -> API -> API Key</i></p>
+        <label class="control-label">{{ _('API Key') }}</label>
+        <div class="controls">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.complicationpro.octoprintApiKey">
+        </div>
+        <hr>
         <h4>Complication Text</h4>
         <p>Set the value you'd like to display for each type of Complication. You can use any string as well as the keys listed below to get print specific information. Please keep in mind that not all values will display properly on all complications.</p>
         <ul>
             <li><code>{progress}</code>: Print progress percentage.</li>
-            <li><s><code>{timeElapsed}</code>: Time elapsed since the print started.</s> <i>Not yet implemented...</i></li>
-            <li><s><code>{timeRemaining}</code>: Time remaining until the print is complete.</s> <i>Not yet implemented...</i></li>
+            <li><code>{timeElapsed}</code>: Time elapsed since the print started.</li>
+            <li><code>{timeRemaining}</code>: Time remaining until the print is complete.</li>
         </ul>
         <label class="control-label">{{ _('Modular Large') }}</label>
         <div class="controls">
