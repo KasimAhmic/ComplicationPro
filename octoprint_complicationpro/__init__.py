@@ -109,7 +109,10 @@ class ComplicationProPlugin(octoprint.plugin.ProgressPlugin,
 				# Replace the tokens in the strings with their accompanying print job values
 				value = self._settings.get([complication])
 				value = value.replace("{progress}", str(round(data["progress"]["completion"], 2)))
-				value = value.replace("{timeRemaining}", self.convert_seconds(data["progress"]["printTimeLeft"]))
+				if data["progress"]["printTimeLeft"] is None:
+					value = value.replace("{timeRemaining}", "Calculating...")
+				else:
+					value = value.replace("{timeRemaining}", self.convert_seconds(data["progress"]["printTimeLeft"]))
 				value = value.replace("{timeElapsed}", self.convert_seconds(data["progress"]["printTime"]))
 				value = value.replace("{fileName}", str(data["file"]["name"]))
 				value = value.replace("{state}", str(data["state"]))
