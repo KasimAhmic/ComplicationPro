@@ -22,7 +22,7 @@ or manually using this URL:
 ## Options
 Currently, ComplicationPro supports 5 tracking tokens.
 | Token             | Description                                 | Value Example    | API Location (from api/job/)   |
-|-------------------|---------------------------------------------|------------------|--------------------------------|
+| ----------------- | ------------------------------------------- | ---------------- | ------------------------------ |
 | `{progress}`      | Print progress in percentage form           | "18.26"          | `progress.completion`          |
 | `{timeElapsed}`   | How long the print has been going for       | "01:25:37"       | `progress.printTime`           |
 | `{timeRemaining}` | How much longer until the print is complete | "00:12:23"       | `progress.printTimeLeft`       |
