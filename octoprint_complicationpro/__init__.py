@@ -114,7 +114,7 @@ class ComplicationProPlugin(octoprint.plugin.ProgressPlugin,
 				else:
 					value = value.replace("{timeRemaining}", self.convert_seconds(data["progress"]["printTimeLeft"]))
 				value = value.replace("{timeElapsed}", self.convert_seconds(data["progress"]["printTime"]))
-				value = value.replace("{fileName}", str(data["file"]["name"]))
+				value = value.replace("{fileName}", str(data["job"]["file"]["name"]))
 				value = value.replace("{state}", str(data["state"]))
 
 				# Submit the change to the Complicated API
