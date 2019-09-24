@@ -97,6 +97,7 @@ class ComplicationProPlugin(octoprint.plugin.ProgressPlugin,
 
 		# Send a GET request to the Octoprint API to retrieve print job information
 		req = Request(octoprintUrl + "/api/job")
+		req.add_header("Content-Type", "application/json")
 		req.add_header("X-Api-Key", octoprintApiKey)
 		# Read returned data as JSON
 		data = json.loads(urlopen(req).read())
