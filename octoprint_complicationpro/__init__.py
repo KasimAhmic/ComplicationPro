@@ -110,6 +110,8 @@ class ComplicationProPlugin(octoprint.plugin.ProgressPlugin,
 				value = value.replace("{progress}", str(round(data["progress"]["completion"], 2)))
 				value = value.replace("{timeRemaining}", self.convert_seconds(data["progress"]["printTimeLeft"]))
 				value = value.replace("{timeElapsed}", self.convert_seconds(data["progress"]["printTime"]))
+				value = value.replace("{fileName}", str(data["file"]["name"]))
+				value = value.replace("{state}", str(data["state"]))
 
 				# Submit the change to the Complicated API
 				complicated.changeComplication(apiKey, complication, value)
