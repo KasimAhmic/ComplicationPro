@@ -16,11 +16,13 @@
         </div>
         <hr>
         <h4>Complication Text</h4>
-        <p>Set the value you'd like to display for each type of Complication. You can use any string as well as the keys listed below to get print specific information. Please keep in mind that not all values will display properly on all complications.</p>
+        <p>Set the value you'd like to display for each type of Complication. You can use any string as well as the tokens listed below to get print specific information. Please keep in mind that not all values will display properly on all complication types.</p>
         <ul>
             <li><code>{progress}</code>: Print progress percentage.</li>
             <li><code>{timeElapsed}</code>: Time elapsed since the print started.</li>
             <li><code>{timeRemaining}</code>: Time remaining until the print is complete.</li>
+            <li><code>{fileName}</code>: Current prints file name.</li>
+            <li><code>{state}</code>: Current printer state.</li>
         </ul>
         <label class="control-label">{{ _('Modular Large') }}</label>
         <div class="controls">

@@ -19,6 +19,16 @@ or manually using this URL:
 8. Insert the OctoPrint API Key into the appropriate text box.
 9. Under Complication Text, enter the values you'd like to see for each Complication type you'd like to use. Leave blank if you don't want to use it.
 
+## Options
+Currently, ComplicationPro supports 5 tracking tokens.
+| Token             | Description                                 | Value Example    | API Location (from api/job/)   |
+|-------------------|---------------------------------------------|------------------|--------------------------------|
+| `{progress}`      | Print progress in percentage form           | "18.26"          | `progress.completion`          |
+| `{timeElapsed}`   | How long the print has been going for       | "01:25:37"       | `progress.printTime`           |
+| `{timeRemaining}` | How much longer until the print is complete | "00:12:23"       | `progress.printTimeLeft`       |
+| `{fileName}`      | Current prints file name                    | "keychain.gcode" | `job.file.name`                |
+| `{state}`         | Current printer state                       | "Operational"    | `state`                        |
+
 ## In Progress
 This plugin is far from finished at this point. I'd like to add more statistics and will research how to do that shortly. The following are features that I'd like to add:
 - Tracking filament used
